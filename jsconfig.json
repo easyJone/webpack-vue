@@ -1,0 +1,13 @@
+// 给编译器的配置文件, 配置语言服务, 告诉vscode哪些是项目文件, 哪些文件不用扫描解析, 提高运行速度
+{
+  "exclude": ["node_modules", "dist"], // 扫描排除
+  "include": ["src/**/*"], // 项目文件
+  "compilerOptions": { // 解析配置
+    "baseUrl": ".",
+    "paths": {
+      "aaa/*": ["./src/pages/*"], // 配置别名路径
+    },
+    "target": "es6", // 指定使用的默认库
+    "allowSyntheticDefaultImports": true, // 允许从没有默认导出的模块进行默认导入
+  }
+}

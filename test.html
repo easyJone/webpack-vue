@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+
+  <body>
+
+    <script>
+      const AsyncComponentHook = path => () => {
+        // 通过 webpack 的内联注释,设置模块名
+        let component = import(/* webpackChunkName: "view-[request]" */ `@/views/${path}.vue`);
+        component.catch((e) => {
+          console.error(e);
+        });
+        return component;
+      };
+    </script>
+  </body>
+
+</html>

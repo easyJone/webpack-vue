@@ -21,7 +21,7 @@ heyOptions.install = (vue) => {
       if (!heyInstance) {
         initHeyInstance()
       }
-      heyInstance.content = options
+      heyInstance.content = options.content
       return heyInstance
     }
   }

@@ -2,7 +2,6 @@
   <div class="home-page">
     <h1>HOME页面</h1>
     <h2>{{url || '没有正常读取到全局变量'}}</h2>
-    <router-view></router-view>
   </div>
 </template>
 
@@ -15,19 +14,20 @@ export default {
     }
   },
   created () {
-    // const a = this.$createAAa({
-    //   $props: {
-    //     text: 'ninini'
-    //   },
-    //   $events: {
-    //     clickTop: (data) => {
-    //       alert(data)
-    //     }
-    //   }
-    // }).show()
-    // setTimeout(() => {
-    //   a.remove()
-    // },1000)
+    const a = this.$createAAa({
+      $props: {
+        text: 'ninini'
+      },
+      // text: 'hahahha',
+      $events: {
+        clickTop: (data) => {
+          alert(data)
+        }
+      }
+    }).show()
+    setTimeout(() => {
+      a.remove()
+    },1000)
     this.$hey.showHey({content: 'nihao'})
     
   }

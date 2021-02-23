@@ -4,7 +4,7 @@ module.exports = {
   outputDir: 'dist',
   assetsDir: 'static',
   // indexPath: 'index.html',
-  // filenameHashing: true,
+  filenameHashing: true,
   pages: getPages(),
   productionSourceMap: false,
   devServer: {
